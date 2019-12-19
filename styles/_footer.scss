@@ -1,0 +1,29 @@
+.footer {
+  @include flexbox(column, space-between, center);
+  flex-shrink: 1;
+  min-height: 70px;
+  padding: 30px;
+  background: $color--background-accent-light;
+
+  @media (min-width: $screen-size--L) {
+    justify-content: center;
+    min-height: 250px;
+  }
+
+  &__titel {
+    font-size: 30px;
+    font-weight: $font-weight--bold;
+    color: $color--text-white;
+    margin: 0;
+  }
+
+  &__paragraf {
+    color: $color--text-white;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  u {
+    color: $color--text-pop-muted;
+  }
+}

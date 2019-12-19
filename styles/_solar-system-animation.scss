@@ -1,0 +1,76 @@
+.faq-section__travel-time__img-container {
+  background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
+  display: grid;
+  grid: 1fr / 1fr;
+  place-items: center;
+  padding: 30px;
+  object-fit: cover;
+}
+
+%center {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sun {
+  height: 48px;
+  width: 48px;
+  @extend %center;
+  border-radius: 100%;
+}
+
+.orb {
+  @extend %center;
+  border: 1px dashed grey;
+  border-radius: 100%;
+  animation: move-planet linear infinite;
+}
+
+.planet {
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+}
+
+.earth {
+  &.orb {
+    width: 150px;
+    height: 150px;
+    animation-duration: 7s;
+
+    @media (min-width: $screen-size--s) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .planet {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.mars {
+  &.orb {
+    width: 250px;
+    height: 250px;
+    animation-duration: 10s;
+
+    @media (min-width: $screen-size--s) {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  .planet {
+    width: 32px;
+    height: 30px;
+  }
+}
+
+@keyframes move-planet {
+  100% {
+    transform: rotate(360deg);
+  }
+}

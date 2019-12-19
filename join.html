@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Mars One</title>
+  </head>
+  <body>
+    <header class="header join">
+      <nav class="menu-nav">
+        <img class="menu-nav__logo" src="./projekt-bilder/Logo.svg" alt="" />
+        <ul class="menu-nav__list">
+          <li class="menu-nav__list__item">
+            <a href="./index.html">Mars One</a>
+          </li>
+          <li class="menu-nav__list__item">
+            <a href="./FAQ.html">FAQ</a>
+          </li>
+          <li class="menu-nav__list__item--active">
+            <a href="./join.html">Join the Crew</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero-section__text-container">
+        <h1 class="hero-section__text-container__titel">
+          Be brave, join the journey!
+        </h1>
+        <h2 class="hero-section__text-container__titel-2">
+          Be one of the next heroes in space
+        </h2>
+      </div>
+    </header>
+    <main class="join">
+      <div class="join__text-container">
+        <h3 class="join__text-container__titel">Join us in the mission</h3>
+        <p class="join__text-container__paragraf">
+          Be part of the mission. Send us your motivation of why just you should
+          be the next space traveler
+        </p>
+      </div>
+
+      <form action="https://formspree.io/xknogege">
+        <label class="label label-first-name" for="first-name"
+          >First name<input
+            class="text-input input-first-name"
+            type="text"
+            placeholder="Han solo"
+            name="first-name"
+            id="first-name"
+            required
+        /></label>
+
+        <label class="label label-last-name" for="last-name"
+          >Last name<input
+            class="text-input input-last-name"
+            type="text"
+            name="last-name"
+            id="last-name"
+            required
+        /></label>
+
+        <label class="label label-date" for="birth-date"
+          >Date of Birth<input
+            class="date-input "
+            type="date"
+            name="birth-date"
+            id="birth-date"
+            required
+        /></label>
+
+        <label class="label label-professional" for="professional"
+          >Professional<input
+            class="text-input input-professional"
+            type="text"
+            name="professional"
+            id="professional"
+            required
+        /></label>
+
+        <label class="label label-prime-skill" for="prime-skill"
+          >Prime skill
+          <input
+            class="text-input input-prime-skill"
+            type="text"
+            name="prime-skill"
+            id="prime-skill"
+        /></label>
+
+        <label class="label label-motivation" for="motivation"
+          >Motivation
+          <textarea
+            rows="10"
+            class="text-area-input input-motivation"
+            name="motivation"
+            id="motivation"
+          ></textarea
+        ></label>
+
+        <button>Submit</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <h5 class="footer__titel">Mars One</h5>
+      <p class="footer__paragraf">
+        This site is made for educational purpose and is based on the real
+        <u>Mars One</u> Mars One project.
+      </p>
+    </footer>
+  </body>
+</html>

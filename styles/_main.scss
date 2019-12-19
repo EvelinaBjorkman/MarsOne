@@ -1,0 +1,52 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: $color--background-main;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: $font-weight--medium;
+  color: $color--decor;
+  background: white;
+  border: 1px solid $color--decor;
+  border-radius: 10px;
+  height: 35px;
+  width: 140x;
+  transition: color 500ms ease-out;
+
+  @media (min-width: $screen-size--m) {
+    &:hover {
+      color: $color--text-white;
+      background: $color--decor;
+    }
+  }
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: $font-weight--extra-bold;
+}
+
+h4 {
+  color: $color--text-pop;
+  font-weight: $font-weight--medium;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  color: $color--text-main;
+  font-weight: $font-weight--medium;
+}
+
+a {
+  text-decoration: none;
+}
+
+u {
+  text-decoration: none;
+  font-weight: $font-weight--bold;
+}

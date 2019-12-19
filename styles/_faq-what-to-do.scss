@@ -1,0 +1,44 @@
+.faq-section {
+  &__what-to-do {
+    @include flexbox(column, flex-start, stretch);
+    background: $color--background-card;
+    box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+
+    @media (min-width: $screen-size--m) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $screen-size--L) {
+      min-height: 400px;
+    }
+
+    &__img-container {
+      position: relative;
+      flex: $take-half;
+
+      &__img {
+        @extend %max-width-height-100;
+        object-fit: cover;
+
+        @media (min-width: $screen-size--L) {
+          position: absolute;
+        }
+      }
+    }
+
+    &__text-container {
+      @include flexbox(column, center, start);
+      flex: $take-half;
+      padding: 20px;
+
+      @media (min-width: $screen-size--m) {
+        align-self: center;
+        padding: 2em 4em;
+      }
+
+      &__titel {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.faq-section {
+  &__why-mars {
+    grid-row: span 2;
+    background: $color--background-card;
+    box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+
+    @media (min-width: $screen-size--L) {
+      min-width: 360px;
+    }
+
+    &__text-container {
+      padding: 20px;
+
+      @media (min-width: $screen-size--m) {
+        align-self: center;
+        padding: 4em;
+      }
+
+      &__titel {
+        margin: 0;
+      }
+
+      &__paragraf {
+        span {
+          display: none;
+
+          @media (min-width: $screen-size--m) {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    button {
+      @media (min-width: $screen-size--m) {
+        display: none;
+      }
+    }
+  }
+}

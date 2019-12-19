@@ -1,0 +1,35 @@
+.faq-section {
+  &__travel-time {
+    grid-column: span 2;
+    @include flexbox(column, flex-start, stretch);
+    background: $color--background-card;
+
+    @media (min-width: $screen-size--m) {
+      flex-direction: row-reverse;
+    }
+
+    &__text-container {
+      @include flexbox(column, center, start);
+      flex: $take-half;
+      padding: 20px;
+
+      @media (min-width: $screen-size--m) {
+        align-self: center;
+        padding: 2em 4em;
+      }
+
+      &__titel {
+        margin: 0;
+      }
+    }
+
+    &__img-container {
+      position: relative;
+      flex: $take-half;
+
+      @media (min-width: $screen-size--L) {
+        max-width: 460px;
+      }
+    }
+  }
+}

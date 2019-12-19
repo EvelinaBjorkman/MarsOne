@@ -1,0 +1,51 @@
+.info-section {
+  &__sun {
+    grid-row: 2 / 4;
+    grid-column: 2;
+    @include flexbox(column, flex-start, stretch);
+    background: $color--background-card;
+    box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+
+    @media (min-width: $screen-size--m) {
+      flex-direction: row;
+
+      &:nth-of-type(odd) {
+        @media (min-width: $screen-size--m) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    @media (min-width: $screen-size--L) {
+      flex-direction: column-reverse;
+      min-width: 340px;
+    }
+
+    &__text-container {
+      @include flexbox(column, center, start);
+      flex: $take-half;
+      padding: 20px;
+
+      @media (min-width: $screen-size--m) {
+        align-self: center;
+        padding: 2em 4em;
+      }
+
+      &__titel {
+        margin: 0;
+      }
+    }
+
+    &__img-container {
+      @include flexbox(column, center, center);
+      position: relative;
+      flex: $take-half;
+
+      &__img {
+        max-width: 232;
+        max-height: 232;
+        padding: 15px;
+      }
+    }
+  }
+}

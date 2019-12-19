@@ -1,0 +1,37 @@
+.faq-section {
+  &__risky {
+    @include flexbox(column, center, stretch);
+    background: $color--background-card;
+    box-shadow: 0 2px 4px 0 rgba(201, 201, 201, 0.5);
+
+    &__text-container {
+      @include flexbox(column, center, start);
+      padding: 20px;
+      justify-self: center;
+
+      @media (min-width: $screen-size--m) {
+        align-self: center;
+        padding: 2em 4em;
+      }
+
+      @media (min-width: $screen-size--L) {
+        padding: 60px;
+      }
+
+      &__titel {
+        margin: 0;
+      }
+
+      &__list {
+        color: $color--text-pop;
+
+        &__item {
+          :first-child {
+            color: $color--text-main;
+            font-weight: $font-weight--bold;
+          }
+        }
+      }
+    }
+  }
+}
